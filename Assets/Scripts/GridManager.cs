@@ -23,10 +23,10 @@ public class GridManager : MonoBehaviour
         {
             for (int y = 0; y < height; y++)
             {
-                Vector3 spawnPos = new Vector3(x, y, 0);
+                Vector2 spawnPos = new Vector2(x, y);
 
                 // Instantiate the tile at (x, y) world coordinates
-                GameObject newTile = Instantiate(tilePrefab, new Vector3(x, 0, y), Quaternion.identity);
+                GameObject newTile = Instantiate(tilePrefab, spawnPos, Quaternion.identity);
                 newTile.transform.parent = transform;
                 newTile.name = $"Tile_{x}_{y}";
 
@@ -34,7 +34,6 @@ public class GridManager : MonoBehaviour
                 BoardTile tileScript = newTile.GetComponent<BoardTile>();
                 tileScript.x = x;
                 tileScript.y = y;
-                grid[x, y] = tileScript;
             }
         }
     }
