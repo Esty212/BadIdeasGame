@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9108734594150704298}
   m_Layer: 6
   m_Name: Bug
-  m_TagString: Untagged
+  m_TagString: Bug
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1816215111
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 0.20914187, g: 0.9056604, b: 0, a: 1}
@@ -100,7 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightOrb: {fileID: 0}
-  speed: 2.5
+  moveSpeed: 5
+  moveInterval: 0.3
 --- !u!58 &432803946853694656
 CircleCollider2D:
   m_ObjectHideFlags: 0
