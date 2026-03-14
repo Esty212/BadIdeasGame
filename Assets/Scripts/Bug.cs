@@ -106,6 +106,21 @@ public class Bug : MonoBehaviour
 
         transform.position = targetWorldPos;
         isMoving = false;
+
+        BoardTile currentTile = GridManager.Instance.GetTileAt(gridPos.x, gridPos.y);
+        if (currentTile != null && currentTile.isHole)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void OnDestroy()
+    {
+        BoardTile tile = GridManager.Instance?.GetTileAt(gridPos.x, gridPos.y);
+        if (tile != null)
+        {
+            tile.ClearOccupant();
+        }
     }
 
     void OnCollisionEnter2D(Collision2D other)

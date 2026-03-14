@@ -167,6 +167,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 3925697378234137334, guid: 08e28984b35b62047b481ce18825c28f, type: 3}
+  holePrefab: {fileID: 755690738247021849, guid: 3adf877cc4188c544a64a3ea5dfb55e8, type: 3}
+  holeX: 5
+  holeY: 5
   width: 16
   height: 16
 --- !u!4 &897173189 stripped
@@ -323,6 +326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hole
       objectReference: {fileID: 0}
+    - target: {fileID: 755690738247021849, guid: 3adf877cc4188c544a64a3ea5dfb55e8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7733516921037139305, guid: 3adf877cc4188c544a64a3ea5dfb55e8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.74
@@ -333,7 +340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7733516921037139305, guid: 3adf877cc4188c544a64a3ea5dfb55e8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7733516921037139305, guid: 3adf877cc4188c544a64a3ea5dfb55e8, type: 3}
       propertyPath: m_LocalRotation.w

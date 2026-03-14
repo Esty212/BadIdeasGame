@@ -6,6 +6,7 @@ public class BoardTile : MonoBehaviour
 {
     public int x, y;
     public bool isWalkable = true;
+    public bool isHole;
 
     private GameObject occupant;
 

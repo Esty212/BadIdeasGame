@@ -6,6 +6,9 @@ public class GridManager : MonoBehaviour
     public static GridManager Instance { get; private set; }
 
     public GameObject tilePrefab;
+    [SerializeField] private GameObject holePrefab;
+    [SerializeField] private int holeX;
+    [SerializeField] private int holeY;
     public int width = 8;
     public int height = 8;
 
@@ -40,6 +43,22 @@ public class GridManager : MonoBehaviour
                 grid[x, y] = tileScript;
             }
         }
+
+        SpawnHole();
+    }
+
+    void SpawnHole()
+    {
+        if (holePrefab == null || !IsValidTile(holeX, holeY))
+            return;
+
+        Vector3 holeWorldPos = GridToWorld(holeX, holeY);
+        GameObject hole = Instantiate(holePrefab, holeWorldPos, Quaternion.identity);
+        hole.transform.parent = transform;
+        hole.name = $"Hole_{holeX}_{holeY}";
+
+        BoardTile holeTile = grid[holeX, holeY];
+        holeTile.isHole = true;
     }
 
     public BoardTile GetTileAt(int x, int y)
